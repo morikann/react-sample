@@ -1,25 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React on mk
-        </a>
-      </header>
-    </div>
-  );
+class App extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {name: '犬派？猫派？'};
+  }
+
+  handleClick(name) {
+    this.setState({name: name});
+  }
+
+  render() {
+    const text = 'Hello world'
+    return(
+      <div>
+        <h1>{this.state.name}</h1>
+        <button onClick={() => {this.handleClick('犬派')}}>犬派</button>
+        <button onClick={() => {this.handleClick('猫派')}}>猫派</button>
+        { text }
+      </div>
+    );
+  }
 }
 
 export default App;
