@@ -1,6 +1,9 @@
 import React from 'react';
 import './practice.css';
 import Language from './Language';
+import Header from './Header';
+import Footer from './Footer';
+import Main from './Main';
 
 class App extends React.Component {
   constructor(props) {
@@ -50,6 +53,10 @@ class App extends React.Component {
 
     return(
       <div>
+        <Header />
+        <Main />
+        <Footer />
+        <div>{ divide }</div>
         <h1 className="title">{ this.state.name }</h1>
         <button onClick={() => {this.handleClick('犬派')}}>犬派</button>
         <button onClick={() => {this.handleClick('猫派')}}>猫派</button>
@@ -69,6 +76,8 @@ class App extends React.Component {
             />
           )
         })}
+
+        <div>{ divide }</div>
       </div>
     );
   }
