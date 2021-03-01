@@ -1,5 +1,6 @@
 import React from 'react';
 import Lesson from './Lesson';
+import ContactForm from './ContactForm';
 
 class Main extends React.Component {
   render() {
@@ -44,6 +45,10 @@ class Main extends React.Component {
                 />
               )
             })}
+          </div>
+          <div className="contact-container">
+            <h3>お問い合わせ</h3>
+            <ContactForm />
           </div>
         </div>
       </div>
