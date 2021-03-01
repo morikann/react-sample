@@ -1,0 +1,33 @@
+.title {
+  color: skyblue;
+}
+
+.language-item {
+  width: 240px;
+  height: 250px;
+  background: #ffffff;
+  margin: 15px;
+  float: left;
+  box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 6px, rgba(0, 0, 0, 0.12) 0px 1px 4px;
+  border-radius: 3px;
+  position: relative;
+}
+
+.language-name {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 40px;
+  margin: auto;
+  text-align: center;
+}
+
+.language-image {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 40px;
+  margin: auto;
+  height: auto;
+  width: 60%;
+}

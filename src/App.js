@@ -1,4 +1,6 @@
 import React from 'react';
+import './practice.css';
+import Language from './Language';
 
 class App extends React.Component {
   constructor(props) {
@@ -19,9 +21,36 @@ class App extends React.Component {
 
   render() {
     const divide = '-----------------------------------------------'
+    const languageList = [
+      {
+        name: 'HTML & CSS',
+        image: 'https://s3-ap-northeast-1.amazonaws.com/progate/shared/images/lesson/react/html.svg'
+      },
+      {
+        name: 'JavaScript',
+        image: 'https://s3-ap-northeast-1.amazonaws.com/progate/shared/images/lesson/react/es6.svg'
+      },
+      {
+        name: 'React',
+        image: 'https://s3-ap-northeast-1.amazonaws.com/progate/shared/images/lesson/react/react.svg'
+      },
+      {
+        name: 'Ruby',
+        image: 'https://s3-ap-northeast-1.amazonaws.com/progate/shared/images/lesson/react/ruby.svg'
+      },
+      {
+        name: 'Ruby on Rails',
+        image: 'https://s3-ap-northeast-1.amazonaws.com/progate/shared/images/lesson/react/rails.svg'
+      },
+      {
+        name: 'Python',
+        image: 'https://s3-ap-northeast-1.amazonaws.com/progate/shared/images/lesson/react/python.svg'
+      }
+    ];
+
     return(
       <div>
-        <h1>{ this.state.name }</h1>
+        <h1 className="title">{ this.state.name }</h1>
         <button onClick={() => {this.handleClick('犬派')}}>犬派</button>
         <button onClick={() => {this.handleClick('猫派')}}>猫派</button>
 
@@ -29,6 +58,17 @@ class App extends React.Component {
 
         <p>{ this.state.count }</p>
         <button onClick={ () => {this.countUp()} }>+</button>
+
+        <div>{ divide }</div>
+
+        { languageList.map((languageItem) => {
+          return(
+            <Language 
+              name = { languageItem.name }
+              image = { languageItem.image }
+            />
+          )
+        })}
       </div>
     );
   }
